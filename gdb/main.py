@@ -23,12 +23,14 @@ def insertvtt(value, table, fronted):
                                 except ValueError:
                                     print("GDB INSERTVTT ERROR")
                       
-def gaft(table):
+def gaft(table, etn):
     try:
       returnar = []
       cycler = 0
       iot = db.index(table)
-      returnar.append(db[iot])
+      if etn == False:
+        
+        returnar.append(db[iot])
       cycler += 1
       while db[iot + cycler] != "endtab;":
         returnar.append(db[iot + cycler])
@@ -37,13 +39,3 @@ def gaft(table):
         
     except:
       print("GDB ERROR GAFT")
-      
-    
-      
-      
-      
-      
-    
-    
-    
-    
